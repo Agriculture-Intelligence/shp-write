@@ -3,10 +3,11 @@
   "version": "0.3.2",
   "description": "write shapefiles from pure javascript",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "mocha -R spec",
     "prepublish": "npm run make",
-    "make": "browserify -s shpwrite ./ > shpwrite.js"
+    "make": "browserify -s shpwrite ./ > shpwrite.ts"
   },
   "repository": {
     "type": "git",
@@ -35,13 +36,14 @@
   },
   "dependencies": {
     "dbf": "0.1.4",
-    "jszip": "2.5.0"
+    "jszip": "^3.6.0"
   },
   "devDependencies": {
     "browserify": "^13.0.0",
     "cz-conventional-changelog": "^1.2.0",
     "expect.js": "~0.3.1",
-    "mocha": "~2.4.5"
+    "mocha": "~2.4.5",
+    "typescript": "^5.1.6"
   },
   "config": {
     "commitizen": {
